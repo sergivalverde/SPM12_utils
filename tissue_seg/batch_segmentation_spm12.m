@@ -74,9 +74,7 @@ function batch_segmentation_spm12(image_pool, t, options)
             label_vol = (label_vol <= 3).*label_vol;
             label_vol = reshape(label_vol, sz);
             csf_in.img = single(label_vol);
-
-            %ul = unique(label_vol);
-            %disp(['    unique labels: ', num2str(ul')]);
+            csf_in.hdr.dime.scl_slope = 1;
             save_compressed_nii(csf_in,[seg_path,'/',scan_number,'_SPM12']);
         end
         
