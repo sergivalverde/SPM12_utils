@@ -8,16 +8,16 @@ The function `batch_segmentation_spm12.m` is designed to perform tissue segmenta
 
 ```
 struct{scan_index}.image_folder = 'folder where input images live'
-  struct{scan_index}.scan_name =    'patient folder'
-  struct{scan_index}.image_identifier = 'image identifier'
+struct{scan_index}.scan_name =    'patient folder'
+struct{scan_index}.image_identifier = 'image identifier'
 ```
 Also, several options have to set beforehand:
 
 ```
 options.SPM_PATH = 'folder where SPM12 lives
-  options.SPM_SAVE_TRANSFORMATIONS = 'if 1, SPM12 will store the internal registration transformations (useful to use the internal priors)
-  options.BUILD_DISCRETE = 'if 1, an additional scan with the discretized 3 main tissues is also stored.
-  options.PACKRESULTS = 'if 1, results are packed in a SPM12 folder in the location than the input image.
+options.SPM_SAVE_TRANSFORMATIONS = 'if 1, SPM12 will store the internal registration transformations (useful to use the internal priors)
+options.BUILD_DISCRETE = 'if 1, an additional scan with the discretized 3 main tissues is also stored.
+options.PACKRESULTS = 'if 1, results are packed in a SPM12 folder in the location than the input image.
 ```
 
 ## Registration 
